@@ -1,0 +1,248 @@
+/* ================= Base ================= */
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("gatinhos.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+
+/* ================= Envelope ================= */
+
+#envelope-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* controla distância entre todos os elementos */
+    text-align: center;
+    cursor: pointer;
+    padding: 20px;
+}
+
+#envelope {
+    width: clamp(200px, 60vw, 500px);
+    animation: pulse 1.5s infinite;
+}
+
+.envelope-message {
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    padding: clamp(10px, 3vw, 20px);
+    border-radius: 8px;
+    font-size: clamp(16px, 4vw, 60px);
+    margin-bottom: -100px;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+/* ================= Letter Container ================= */
+
+#letter-container {
+    display: none;
+    position: fixed;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ================= Letter Window ================= */
+
+.letter-window {
+    width: min(95vw, 800px);
+    min-height: clamp(400px, 70vh, 600px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(15px, 3vw, 25px);
+    justify-content: center;
+
+    text-align: justify;
+
+    background-image: url("fundoimg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    padding: clamp(80px, 12vw, 150px) 
+             clamp(20px, 5vw, 40px) 
+             clamp(40px, 6vw, 60px);
+
+    border-radius: 12px;
+
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.letter-window.open {
+    opacity: 1;
+}
+
+/* ================= Content Row (texto + gato) ================= */
+
+.content-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: clamp(15px, 3vw, 30px);
+    width: 100%;
+}
+
+/* ================= Title Box ================= */
+
+.title-box {
+    flex: 1;
+    text-align: justify;
+    padding: clamp(10px, 3vw, 10px);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    margin-right: clamp(12px, 10vw, -80px);
+    margin-left: clamp(40px, 4vw, 80px); 
+    margin-top: clamp(100px, 30vh, 230px);
+
+    max-width: 1000px;
+}
+
+.title-box h1 {
+    margin: 0;
+    font-size: clamp(14px, 3.2vw, 28px);
+    line-height: 1.4;
+    color: #000000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    hyphens: auto;
+}
+
+/* ================= Cat Image ================= */
+
+.cat {
+    flex-shrink: 0;
+    width: clamp(90px, 22vw, 160px); 
+    height: auto;
+
+    /* margens responsivas */
+    margin-right: clamp(10px, 5vw, 70px);
+    margin-top: clamp(220px, 45vh, 420px); /* aumentei o mínimo para que ele fique mais abaixo */
+    
+}
+
+@media (max-width: 700px) {
+    .cat {
+        margin-right: clamp(5px, 10vw, 30px);
+        margin-top: clamp(50px, 20vh, 120px); /* sobe o gato na tela */
+    }
+}
+
+
+
+/* ================= Buttons ================= */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(10px, 3vw, 25px);
+    flex-wrap: wrap;
+    margin-top: clamp(20px, 5vw, 40px); /* margem responsiva */
+}
+
+/* ================= Ajuste para celulares ================= */
+@media (max-width: 700px) {
+    .buttons {
+        margin-top: -100px; /* diminui ainda mais em telas pequenas */
+    }
+}
+
+.btn {
+    width: clamp(90px, 20vw, 200px);
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.yes-btn:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* ================= Final Text ================= */
+.final-container {
+    display: none; /* <- escondido inicialmente */
+    flex-direction: column;
+    align-items: center; /* centraliza horizontalmente */
+    justify-content: flex-start; /* flex-start para que o gato não empurre o texto */
+    width: 100%;
+    position: relative;
+}
+
+/* Texto final */
+.final-text {
+    margin-top: clamp(10px, 5vw, 400px); /* mínimo menor para telas pequenas */
+    font-size: clamp(30px, 3vw, 35px);
+    line-height: 1.4;
+    text-align: left;
+}
+
+/* Gato final */
+.cat-final {
+    width: clamp(200px, 25vw, 250px);
+    margin-top: clamp(10px, 16vh, 500px); /* mínimo menor, máximo maior */
+    height: auto;
+    display: block; 
+}
+
+
+
+
+
+
+
+/* ================= Pixel Art ================= */
+
+#envelope,
+.cat,
+.btn,
+.letter-window {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+/* ================= Mantém layout igual no celular ================= */
+
+@media (max-width: 700px) {
+    .content-row {
+        flex-direction: row; 
+        align-items: center;
+    }
+
+    .title-box {
+        text-align: left;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-top: 48px;
+        padding: 12px;
+    }
+
+    .title-box h1 {
+        font-size: 0.95rem;
+    }
+
+    .cat {
+        margin-top: 150px; 
+        margin-right: 20px;
+    }
+}
