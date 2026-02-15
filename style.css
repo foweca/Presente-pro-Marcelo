@@ -198,35 +198,34 @@ body {
     /* ================= Content Row ================= */
     .content-row {
         flex-direction: column;
-        align-items: stretch; /* deixa os filhos ocuparem a largura total */
         gap: 15px; 
     }
 
     /* ================= Title Box ================= */
     .title-box {
-        margin-top: 100px; 
-        margin-left: 30px;
-        margin-right: 80px;
+        margin-top: 60px; 
+        margin-left: 10px;
+        margin-right: 10px;
         padding: 12px;
         max-width: 90%;
-        text-align: justify;
+        text-align: center;
         background-color: rgba(255, 255, 255, 0.7);
     }
 
     .title-box h1 {
-        font-size: 0.6rem;
+        font-size: 0.6rem; /* diminuiu a fonte */
         line-height: 1.2;
         word-wrap: break-word;
     }
 
     /* ================= Cat Image ================= */
     .cat {
-        margin-top: 100px;
+        margin-top: 40px;        /* diminui um pouco a distância do topo */
         width: 60px;
         height: auto;
-        display: block;        
-        margin-left: auto;    
-        margin-right: 40px;    
+        display: block;
+        margin-left: 40%;        /* empurra um pouco para a direita sem colar na borda */
+        margin-right: 0;         /* margem direita zero para não estourar */
     }
 
     /* ================= Buttons ================= */
@@ -251,7 +250,7 @@ body {
 
     .final-text {
         margin-top: 80px; 
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* diminuiu a fonte */
         text-align: left;
         line-height: 1.4;
         max-width: 90%;
@@ -269,6 +268,8 @@ body {
         padding: 40px 20px 30px;
     }
 }
+
+
 
 
 
