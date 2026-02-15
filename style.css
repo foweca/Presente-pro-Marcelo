@@ -208,7 +208,6 @@ body {
         margin-right: 40px;
         padding: 12px;
         max-width: 90%;
-        text-align: center;
         background-color: rgba(255, 255, 255, 0.7);
     }
 
@@ -220,12 +219,12 @@ body {
 
     /* ================= Cat Image ================= */
     .cat {
-        margin-top: 60px;        /* diminui um pouco a distância do topo */
+        margin-top: 60px;        
         width: 60px;
         height: auto;
         display: block;
-        margin-left: 35%;        /* empurra um pouco para a direita sem colar na borda */
-        margin-right: 0;         /* margem direita zero para não estourar */
+        margin-left: 35%;        
+        margin-right: 0;         
     }
 
     /* ================= Buttons ================= */
@@ -268,4 +267,5 @@ body {
         padding: 40px 20px 30px;
     }
 }
+
 
