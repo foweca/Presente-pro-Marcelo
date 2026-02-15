@@ -250,7 +250,7 @@ body {
 
     .final-text {
         margin-top: 60px; 
-        font-size: 0.9rem; /* diminuiu a fonte */
+        font-size: 0.9rem; 
         text-align: left;
         line-height: 1.4;
         max-width: 90%;
@@ -258,7 +258,7 @@ body {
     }
 
     .cat-final {
-        margin-bottom: 10px;
+        margin-top: 100px;
         width: 100px;
         height: auto;
     }
@@ -268,6 +268,7 @@ body {
         padding: 40px 20px 30px;
     }
 }
+
 
 
 
