@@ -214,7 +214,7 @@ body {
     }
 
     .title-box h1 {
-        font-size: 1rem; /* aumenta um pouco a fonte */
+        font-size: 0,5rem; 
         line-height: 1.4;
         word-wrap: break-word;
     }
@@ -222,21 +222,22 @@ body {
     /* ================= Cat Image ================= */
     .cat {
         margin-top: 20px;
-        width: 110px;
+        margin-left: 100px;
+        width: 60px;
         height: auto;
     }
 
     /* ================= Buttons ================= */
     .buttons {
-        margin-bottom: 20px;
+        margin-bottom: 100px;
         gap: 10px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
     .btn {
-        width: 20px; 
-        max-width: 100px;
+        margin-bottom: 100px;
+        width: 5px;
         height: auto;
     }
 
@@ -266,6 +267,7 @@ body {
         padding: 40px 20px 30px;
     }
 }
+
 
 
 
