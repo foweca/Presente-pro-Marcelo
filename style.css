@@ -214,15 +214,16 @@ body {
     }
 
     .title-box h1 {
-        font-size: 0,5rem; 
-        line-height: 1.4;
+        font-size: 0.8rem; /* diminuiu a fonte */
+        line-height: 1.2;
         word-wrap: break-word;
     }
 
     /* ================= Cat Image ================= */
     .cat {
         margin-top: 20px;
-        margin-left: 100px;
+        margin-left: auto;   /* empurra para a direita */
+        margin-right: 20px;  /* distância da borda direita */
         width: 60px;
         height: auto;
     }
@@ -237,7 +238,7 @@ body {
 
     .btn {
         margin-bottom: 100px;
-        width: 5px;
+        width: 40px; /* ajustei para ficar visível */
         height: auto;
     }
 
@@ -249,7 +250,7 @@ body {
 
     .final-text {
         margin-top: 80px; 
-        font-size: 1.2rem;
+        font-size: 0.9rem; /* diminuiu a fonte */
         text-align: left;
         line-height: 1.4;
         max-width: 90%;
@@ -267,6 +268,8 @@ body {
         padding: 40px 20px 30px;
     }
 }
+
+
 
 
 
