@@ -198,15 +198,14 @@ body {
     /* ================= Content Row ================= */
     .content-row {
         flex-direction: column;
-        gap: 10px; /* reduz o espaço entre título e gato */
-        align-items: center; /* centraliza os elementos */
+        gap: 15px; 
     }
 
     /* ================= Title Box ================= */
     .title-box {
-        margin-top: 5vh; /* mais próximo do topo */
+        margin-top: 600px; 
         margin-left: 10px;
-        margin-right: 10px;
+        margin-right: 40px;
         padding: 12px;
         max-width: 90%;
         text-align: center;
@@ -214,34 +213,33 @@ body {
     }
 
     .title-box h1 {
-        font-size: 0.7rem; /* fonte menor para celular */
+        font-size: 0.7rem;
         line-height: 1.2;
         word-wrap: break-word;
     }
 
     /* ================= Cat Image ================= */
     .cat {
-        margin-top: 15px; /* mais próximo do título */
+        margin-top: 60px;        /* diminui um pouco a distância do topo */
         width: 60px;
         height: auto;
         display: block;
-        margin-left: 35%; /* empurra levemente para a direita */
-        margin-right: 0;
+        margin-left: 35%;        /* empurra um pouco para a direita sem colar na borda */
+        margin-right: 0;         /* margem direita zero para não estourar */
     }
 
     /* ================= Buttons ================= */
     .buttons {
-        margin-top: 15px; /* espaço entre gato e botões */
-        margin-bottom: 30px;
+        margin-bottom: 80px;
         gap: 10px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
     .btn {
-        width: 80px; /* botões proporcionais */
+        margin-bottom: 30px;
+        width: 80px;
         height: auto;
-        margin-bottom: 10px;
     }
 
     /* ================= Final Container ================= */
@@ -251,8 +249,8 @@ body {
     }
 
     .final-text {
-        margin-top: 20px; /* mais próximo do conteúdo anterior */
-        font-size: 0.9rem; /* fonte menor */
+        margin-top: 60px; 
+        font-size: 0.9rem; /* diminuiu a fonte */
         text-align: left;
         line-height: 1.4;
         max-width: 90%;
@@ -260,30 +258,14 @@ body {
     }
 
     .cat-final {
-        margin-top: 20px; /* reduz espaço final */
+        margin-bottom: 10px;
         width: 100px;
         height: auto;
     }
 
     /* ================= Letter Window ================= */
     .letter-window {
-        padding: 30px 15px 20px; /* reduz padding para caber melhor em tela pequena */
+        padding: 40px 20px 30px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
