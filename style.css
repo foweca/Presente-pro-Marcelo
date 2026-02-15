@@ -228,15 +228,15 @@ body {
 
     /* ================= Buttons ================= */
     .buttons {
-        margin-top: 15px;
+        margin-top: 0px;
         gap: 10px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
     .btn {
-        width: 10vw; 
-        max-width: 120px;
+        width: 5vw; 
+        max-width: 100px;
         height: auto;
     }
 
@@ -266,5 +266,6 @@ body {
         padding: 40px 20px 30px;
     }
 }
+
 
 
