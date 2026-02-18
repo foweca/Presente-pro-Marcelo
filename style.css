@@ -220,6 +220,7 @@ body {
 
     .title-box {
         margin: 0 !important;
+        margin-top: 20px;
         padding: 8px;
         background-color: rgba(255, 255, 255, 0.6);
         border-radius: 8px;
@@ -228,7 +229,6 @@ body {
     }
 
     .title-box h1 {
-        /* Diminuí a fonte para 12px fixos no mobile para ganhar espaço */
         font-size: 12.5px; 
         line-height: 1.2;
         text-align: justify;
@@ -283,6 +283,7 @@ body {
         height: auto;
     }
 }
+
 
 
 
