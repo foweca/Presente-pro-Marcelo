@@ -1,69 +1,61 @@
-// Elements
 const envelopeContainer = document.getElementById("envelope-container");
 const letterContainer = document.getElementById("letter-container");
 const letterWindow = document.querySelector(".letter-window");
-
 const noBtn = document.querySelector(".no-btn");
 const yesBtn = document.querySelector(".yes-btn");
+const finalContainer = document.querySelector(".final-container");
+const contentRow = document.querySelector(".content-row");
+const buttonsDiv = document.getElementById("letter-buttons");
 
-const title = document.getElementById("letter-title");
-const catImg = document.getElementById("letter-cat");     // gato dentro do conteúdo
-const buttons = document.getElementById("letter-buttons");
-const finalContainer = document.querySelector(".final-container"); // container do texto + gato final
 
-// Open Envelope
 envelopeContainer.addEventListener("click", () => {
   envelopeContainer.style.display = "none";
   letterContainer.style.display = "flex";
-
   setTimeout(() => {
     letterWindow.classList.add("open");
   }, 50);
 });
 
-// Move NO Button (limitado à carta)
+
 function moveNoButton() {
+ 
   const letterRect = letterWindow.getBoundingClientRect();
   const buttonRect = noBtn.getBoundingClientRect();
 
-  const maxX = letterRect.width - buttonRect.width;
-  const maxY = letterRect.height - buttonRect.height;
+  
+  const maxX = letterRect.width - buttonRect.width - 20;
+  const maxY = letterRect.height - buttonRect.height - 20;
 
   const randomX = Math.random() * Math.max(0, maxX);
   const randomY = Math.random() * Math.max(0, maxY);
 
-  letterWindow.style.position = "relative";
 
-  noBtn.style.position = "absolute";
+  noBtn.style.position = "absolute"; 
   noBtn.style.left = `${randomX}px`;
   noBtn.style.top = `${randomY}px`;
-  noBtn.style.transition = "all 0.25s ease";
+  noBtn.style.margin = "0"; 
+  noBtn.style.transition = "all 0.2s ease";
 }
 
-// desktop
 noBtn.addEventListener("mouseenter", moveNoButton);
-
-// celular
 noBtn.addEventListener("touchstart", (e) => {
   e.preventDefault();
   moveNoButton();
 });
 
-// Yes button click
 yesBtn.addEventListener("click", () => {
-  // esconde elementos antigos
-  title.style.display = "none";
-  buttons.style.display = "none";
-  const contentRow = document.querySelector(".content-row");
-  if (contentRow) contentRow.style.display = "none";
-  if (catImg) catImg.style.display = "none";
-
-  // mostra o container final (texto + gato)
-  if (finalContainer) finalContainer.style.display = "flex";
-
-  // centraliza container da carta (layout coluna)
-  letterWindow.style.display = "flex";
-  letterWindow.style.flexDirection = "column";
+  contentRow.style.display = "none";
+  buttonsDiv.style.display = "none";
+  noBtn.style.display = "none"; 
+  
+  finalContainer.style.display = "flex";
+  
   letterWindow.style.justifyContent = "center";
-  letterWindow.style.alignItems = "center";
+  letterWindow.style.paddingTop = "30px";
+  
+  finalContainer.style.opacity = "0";
+  setTimeout(() => {
+    finalContainer.style.transition = "opacity 0.6s ease";
+    finalContainer.style.opacity = "1";
+  }, 10);
 });
