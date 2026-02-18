@@ -144,11 +144,13 @@ body {
     align-items: center;
     gap: clamp(10px, 3vw, 25px);
     flex-wrap: wrap;
-    margin-top: clamp(20px, 5vw, 40px);
+    margin-top: clamp(10px, 10vw, 10px);
 }
 
 .btn {
-    width: clamp(90px, 20vw, 200px);
+    width: clamp(90px, 20vw, 150px);
+    padding: 20px;
+    padding-bottom: 5px;
     height: auto;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -169,7 +171,8 @@ body {
 }
 
 .final-text {
-    margin-top: clamp(10px, 5vw, 400px);
+    margin-top: clamp(10px, 5vw, 30px);
+    padding: 25px;
     font-size: clamp(30px, 3vw, 35px);
     line-height: 1.4;
     text-align: left;
@@ -177,7 +180,7 @@ body {
 
 .cat-final {
     width: clamp(200px, 25vw, 250px);
-    margin-top: clamp(10px, 16vh, 500px);
+    margin-top: clamp(100px, 38vh, 400px);
     height: auto;
     display: block;
 }
@@ -192,7 +195,7 @@ body {
     image-rendering: crisp-edges;
 }
 
-/* ================= Responsividade Celular (Ajuste de Altura) ================= */
+/* ================= Responsividade Celular ================= */
 @media (max-width: 700px) {
 
     .letter-window {
@@ -252,9 +255,7 @@ body {
     .btn {
         width: 80px; 
     }
-}
 
-/* ================= Final Text no Mobile ================= */
     
     .final-container {
         display: none; 
@@ -279,3 +280,4 @@ body {
         width: 100px !important; 
         height: auto;
     }
+}
