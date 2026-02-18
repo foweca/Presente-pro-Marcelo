@@ -238,7 +238,7 @@ body {
         width: 80px; 
         height: auto;
         margin: 0 !important;
-        transform: translateY(40px) !important; 
+        transform: translateY(30px) !important; 
         flex-shrink: 0;
     }
 
@@ -283,4 +283,5 @@ body {
         height: auto;
     }
 }
+
 
